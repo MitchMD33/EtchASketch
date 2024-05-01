@@ -1,18 +1,15 @@
 :root {
   --grid-width: 600px;
-  --accent-color: 04AA6D;
+  --accent-color: #04AA6D;
   --inactive-color: rgba(0, 0, 0, 0.25);
 }
-
 * {
   margin: 0;
   padding: 0;
 }
-
-body { 
-  background-color: aquamarine;
-  font-family: 'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+body {
+  background-color: aliceblue;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .container {
@@ -20,35 +17,33 @@ body {
   width: var(--grid-width);
 }
 
-.head-container {
+.top {
   display: flex;
   padding: 3px;
   margin-top: 100px;
   background-color: inherit;
   color: var(--inactive-color);
-  width:fit-content;
+  width: fit-content;
   margin-bottom: 6px;
 }
 
-
 .button-cat {
-  font-size: samll;
+  font-size: small;
   color: rgba(0, 0, 0, 0.473);
 }
 
-.head-button {
+.top-button {
   display: flex;
   align-items: center;
   background-color: white;
   padding: 6px;
   margin-right: 9px;
 }
-
-.head-button:hover {
+.top-button:hover {
   color: #04AA6D;
 }
 
-.head-button > span {
+.top-button > span {
   cursor: pointer;
   margin-right: 3px;
 }
@@ -57,41 +52,29 @@ body {
   border: none;
 }
 
-#sketchPad {
-  display: flex; 
+#sketch-area {
+  display: flex;
   flex-wrap: wrap;
-  background-color: white;
-  margin: 100px auto 0 auto;
-
-}
-
-.cell {
-  border: 1px solid whitesmoke;
-}
-
-#slide-container {
   margin: 0 auto;
+  background-color: white;
 }
 
 .slider {
-  -webkit-appearance: none;
+ -webkit-appearance: none;
   appearance: none;
   height: 25px;
   width: 100%;
-  background: rgba(200, 255, 238, 0.726);
+  background: rgba(200, 225, 238, 0.726);
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
 
-
-
-#value {
+#slider-value {
   margin: 0 auto;
   text-align: center;
 }
-
 .slider:hover {
   opacity: 1;
 }
@@ -101,12 +84,13 @@ body {
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #04AA6D;
+  background: var(--accent-color);
+  cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #04AA6D;
+  background: var(--accent-color);
   cursor: pointer;
 }
